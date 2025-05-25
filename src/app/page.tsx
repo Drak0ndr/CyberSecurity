@@ -1,95 +1,59 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
 
+import { IconCheck } from '@tabler/icons-react';
+import { Button, Container, Group, Image, List, Text, ThemeIcon, Title } from '@mantine/core';
+import classes from './HeroBullets.module.css';
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Container size="md">
+      <div className={classes.inner}>
+        <div className={classes.content}>
+          <Title className={classes.title}>
+            A <span className={classes.highlight}>modern</span> React <br /> components library
+          </Title>
+          <Text c="dimmed" mt="md">
+            Build fully functional accessible web applications faster than ever – Mantine includes
+            more than 120 customizable components and hooks to cover you in any situation
+          </Text>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <List
+            mt={30}
+            spacing="sm"
+            size="sm"
+            icon={
+              <ThemeIcon size={20} radius="xl">
+                <IconCheck size={12} stroke={1.5} />
+              </ThemeIcon>
+            }
           >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+            <List.Item>
+              <b>TypeScript based</b> – build type safe applications, all components and hooks
+              export types
+            </List.Item>
+            <List.Item>
+              <b>Free and open source</b> – all packages have MIT license, you can use Mantine in
+              any project
+            </List.Item>
+            <List.Item>
+              <b>No annoying focus ring</b> – focus ring will appear only when user navigates with
+              keyboard
+            </List.Item>
+          </List>
+
+          <Group mt={30}>
+            <Button radius="xl" size="md" className={classes.control}>
+              Get started
+            </Button>
+            <Button variant="default" radius="xl" size="md" className={classes.control}>
+              Source code
+            </Button>
+          </Group>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <Image
+          src="https://ui.mantine.dev/_next/static/media/image.9a65bd94.svg"
+          className={classes.image}
+        />
+      </div>
+    </Container>
   );
 }
