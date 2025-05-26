@@ -17,7 +17,7 @@ RUN \
 
 COPY src ./src
 COPY public ./public
-COPY next.config.js .
+COPY next.config.mjs .
 COPY tsconfig.json .
 
 # Environment variables must be present at build time
@@ -40,7 +40,7 @@ RUN \
   elif [ -f pnpm-lock.yaml ]; then pnpm build; \
   else npm run build; \
   fi
-
+EXPOSE 3000
 # Start Next.js based on the preferred package manager
 CMD \
   if [ -f yarn.lock ]; then yarn start; \
