@@ -1,1 +1,1 @@
-export const baseUrl = 'http://localhost:3000/api';
+export const baseUrl = 'cyber-security-jet.vercel.app/api';
