@@ -1,1 +1,1 @@
-export const baseUrl = 'cyber-security-jet.vercel.app/api';
+export const baseUrl = 'https://cyber-security-jet.vercel.app/api';
