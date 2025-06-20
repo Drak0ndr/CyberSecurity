@@ -10,3 +10,12 @@ jobs:
         run: npm ci
       - name: Lint
         run: npx eslint .
+  checkDeps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install deps
+        run: npm ci
+      - name: Check deps
+        run: npm audit
