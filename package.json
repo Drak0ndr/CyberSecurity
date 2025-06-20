@@ -13,6 +13,7 @@
     "@mantine/hooks": "^8.0.1",
     "@tabler/icons-react": "^3.33.0",
     "http-proxy": "^1.18.1",
+    "https-proxy": "^0.0.2",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^5.5.0",
     "jwt-simple": "^0.2.0",
@@ -29,6 +30,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.20",
+    "eslint-plugin-security": "^3.0.1",
     "typescript": "^5"
   }
 }

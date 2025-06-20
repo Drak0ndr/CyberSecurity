@@ -1,3 +1,6 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:security/recommended-legacy"],
+  "rules": {
+    "security/detect-eval-with-expression": ["error", "always"]
+  }
 }
